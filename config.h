@@ -8,7 +8,7 @@
 #define HAVE_BOOST_ASIO_HPP 1
 
 /* Define to 1 if you have the <boost/unordered_set.hpp> header file. */
-#define HAVE_BOOST_TR1_UNORDERED_SET_HPP 1
+#define HAVE_BOOST_UNORDERED_SET_HPP 1
 
 /* Define to 1 if you have the `floor' function. */
 #define HAVE_FLOOR 1
@@ -30,7 +30,7 @@
 
 /* Define to 1 if you have the `boost_date_time' library (-lboost_date_time).
    */
-/* #undef HAVE_LIBBOOST_DATE_TIME */
+#define HAVE_LIBBOOST_DATE_TIME 1
 
 /* Define to 1 if you have the `boost_date_time-gcc-mt' library
    (-lboost_date_time-gcc-mt). */
@@ -38,11 +38,11 @@
 
 /* Define to 1 if you have the `boost_date_time-mt' library
    (-lboost_date_time-mt). */
-#define HAVE_LIBBOOST_DATE_TIME_MT 1
+/* #undef HAVE_LIBBOOST_DATE_TIME_MT */
 
 /* Define to 1 if you have the `boost_filesystem' library
    (-lboost_filesystem). */
-/* #undef HAVE_LIBBOOST_FILESYSTEM */
+#define HAVE_LIBBOOST_FILESYSTEM 1
 
 /* Define to 1 if you have the `boost_filesystem-gcc-mt' library
    (-lboost_filesystem-gcc-mt). */
@@ -50,20 +50,20 @@
 
 /* Define to 1 if you have the `boost_filesystem-mt' library
    (-lboost_filesystem-mt). */
-#define HAVE_LIBBOOST_FILESYSTEM_MT 1
+/* #undef HAVE_LIBBOOST_FILESYSTEM_MT */
 
 /* Define to 1 if you have the `boost_regex' library (-lboost_regex). */
-/* #undef HAVE_LIBBOOST_REGEX */
+#define HAVE_LIBBOOST_REGEX 1
 
 /* Define to 1 if you have the `boost_regex-gcc-mt' library
    (-lboost_regex-gcc-mt). */
 /* #undef HAVE_LIBBOOST_REGEX_GCC_MT */
 
 /* Define to 1 if you have the `boost_regex-mt' library (-lboost_regex-mt). */
-#define HAVE_LIBBOOST_REGEX_MT 1
+/* #undef HAVE_LIBBOOST_REGEX_MT */
 
 /* Define to 1 if you have the `boost_system' library (-lboost_system). */
-/* #undef HAVE_LIBBOOST_SYSTEM */
+#define HAVE_LIBBOOST_SYSTEM 1
 
 /* Define to 1 if you have the `boost_system-gcc-mt' library
    (-lboost_system-gcc-mt). */
@@ -71,10 +71,10 @@
 
 /* Define to 1 if you have the `boost_system-mt' library (-lboost_system-mt).
    */
-#define HAVE_LIBBOOST_SYSTEM_MT 1
+/* #undef HAVE_LIBBOOST_SYSTEM_MT */
 
 /* Define to 1 if you have the `boost_thread' library (-lboost_thread). */
-/* #undef HAVE_LIBBOOST_THREAD */
+#define HAVE_LIBBOOST_THREAD 1
 
 /* Define to 1 if you have the `boost_thread-gcc-mt' library
    (-lboost_thread-gcc-mt). */
@@ -82,7 +82,7 @@
 
 /* Define to 1 if you have the `boost_thread-mt' library (-lboost_thread-mt).
    */
-#define HAVE_LIBBOOST_THREAD_MT 1
+/* #undef HAVE_LIBBOOST_THREAD_MT */
 
 /* Define to 1 if you have the `gmp' library (-lgmp). */
 #define HAVE_LIBGMP 1
@@ -153,7 +153,7 @@
 #define HAVE_SQRT 1
 
 /* Define to 1 if stdbool.h conforms to C99. */
-#define HAVE_STDBOOL_H 1
+/* #undef HAVE_STDBOOL_H */
 
 /* Define to 1 if you have the <stddef.h> header file. */
 #define HAVE_STDDEF_H 1
