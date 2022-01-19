@@ -111,7 +111,7 @@ AC_SUBST(PROFILER_FLAGS)
 
 # Checks for header files.
 AC_HEADER_STDC
-AC_CHECK_HEADERS([arpa/inet.h netdb.h netinet/in.h stddef.h stdint.h stdlib.h sys/socket.h sys/timeb.h])
+AC_CHECK_HEADERS([arpa/inet.h netdb.h netinet/in.h stddef.h stdint.h stdlib.h sys/socket.h])
 
 # Checks for typedefs, structures, and compiler characteristics.
 AC_HEADER_STDBOOL
@@ -132,7 +132,7 @@ AC_CHECK_TYPES([ptrdiff_t])
 AC_FUNC_MALLOC
 AC_FUNC_MEMCMP
 AC_FUNC_REALLOC
-AC_CHECK_FUNCS([floor ftime gethostbyname gethostname memset pow sqrt strcasecmp strncasecmp strstr strtol])
+AC_CHECK_FUNCS([floor gethostbyname gethostname memset pow sqrt strcasecmp strncasecmp strstr strtol])
 
 # check for libxml2
 AM_PATH_XML2(2.6.5, , AC_MSG_ERROR([you need libxml2 >= 2.6.5 to compile theforgottenserver!]))

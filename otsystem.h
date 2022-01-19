@@ -20,6 +20,7 @@
 #include "definitions.h"
 #include <signal.h>
 
+#include <chrono>
 #include <string>
 #include <algorithm>
 #include <bitset>
@@ -41,26 +42,21 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-#include <time.h>
 #include <assert.h>
 #ifdef WINDOWS
 #include <windows.h>
-#include <sys/timeb.h>
 
 #define OTSERV_ACCESS(file, mode) _access(file, mode);
 inline int64_t OTSYS_TIME()
 {
-	_timeb t;
-	_ftime(&t);
-	return ((int64_t)t.millitm) + ((int64_t)t.time) * 1000;
+	return std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
 }
+
 #else
-#include <sys/timeb.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 
 #include <unistd.h>
-#include <time.h>
 #include <netdb.h>
 #include <errno.h>
 
@@ -70,9 +66,7 @@ inline int64_t OTSYS_TIME()
 #define OTSERV_ACCESS(file, mode) access(file, mode);
 inline int64_t OTSYS_TIME()
 {
-	timeb t;
-	ftime(&t);
-	return ((int64_t)t.millitm) + ((int64_t)t.time) * 1000;
+	return std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
 }
 #endif
 
