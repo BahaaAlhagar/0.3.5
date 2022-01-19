@@ -9,3 +9,6 @@ config.h.in
 missing
 depcomp
 install-sh
+config.h
+config.log
+config.h.*
