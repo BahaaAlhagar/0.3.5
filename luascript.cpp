@@ -901,7 +901,6 @@ void LuaScriptInterface::executeTimer(uint32_t eventIndex)
 
 int32_t LuaScriptInterface::handleFunction(lua_State* L)
 {
-	lua_pushglobaltable(L);
 	lua_getglobal(L, "debug");
 	if(!lua_istable(L, -1))
 	{

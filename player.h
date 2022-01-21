@@ -808,7 +808,7 @@ class Player : public Creature, public Cylinder
 		bool hasCapacity(const Item* item, uint32_t count) const;
 
 	private:
-		bool talkState[13];
+		bool talkState[14];
 		bool inventoryAbilities[11];
 		bool pzLocked;
 		bool saving;

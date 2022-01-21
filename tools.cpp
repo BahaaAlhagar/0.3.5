@@ -600,15 +600,15 @@ std::string parseParams(tokenizer::iterator &it, tokenizer::iterator end)
 
 std::string formatDate(time_t _time/* = 0*/)
 {
-	char buffer[21];
+	char buffer[73];
 	
-	time_t _time = time(NULL);
+	time_t _time2 = time(NULL);
 
-	const tm* tms = localtime(&_time);
+	const tm* tms = localtime(&_time2);
 	if(tms)
 		sprintf(buffer, "%02d/%02d/%04d %02d:%02d:%02d", tms->tm_mday, tms->tm_mon + 1, tms->tm_year + 1900, tms->tm_hour, tms->tm_min, tms->tm_sec);
 	else
-		sprintf(buffer, "UNIX Time: %d", (int32_t)_time);
+		sprintf(buffer, "UNIX Time: %d", (int32_t)_time2);
 
 	return buffer;
 }
@@ -617,9 +617,9 @@ std::string formatDateShort(time_t _time, bool detailed/* = false*/)
 {
 	char buffer[21];
 
-	time_t _time = time(NULL);
+	time_t _time2 = time(NULL);
 
-	const tm* tms = localtime(&_time);
+	const tm* tms = localtime(&_time2);
 	if(tms)
 	{
 		std::string format = "%d %b %Y";
@@ -629,7 +629,7 @@ std::string formatDateShort(time_t _time, bool detailed/* = false*/)
 		strftime(buffer, 25, format.c_str(), tms);
 	}
 	else
-		sprintf(buffer, "UNIX Time: %d", (int32_t)_time);
+		sprintf(buffer, "UNIX Time: %d", (int32_t)_time2);
 
 	return buffer;
 }

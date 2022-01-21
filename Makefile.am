@@ -1,7 +1,7 @@
 noinst_PROGRAMS = theforgottenserver
 
 #CXXFLAGS = -s -O2 -fno-strict-aliasing
-CXXFLAGS = -ggdb -O1 
+CXXFLAGS = -ggdb -O1 -lpthread -pthread
 AM_CXXFLAGS = $(XML_CPPFLAGS) $(OTSERV_FLAGS) $(LUA_CFLAGS) $(DEBUG_FLAGS)\
 $(MYSQL_FLAGS) \
 $(PROFILER_FLAGS) $(OPTIONAL_FLAGS) -D_THREAD_SAFE -D_REENTRANT -Wall

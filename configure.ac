@@ -190,9 +190,9 @@ AC_CHECK_HEADERS([boost/asio.hpp], , [AC_MSG_ERROR("boost::asio header not found
 AC_CHECK_HEADERS([boost/unordered_set.hpp], , [AC_MSG_ERROR("boost::unordered_set header not found.")])
 
 #check lua 5.2
-PKG_CHECK_MODULES(LUA, lua5.2 >= 5.2, , [
-	AC_CHECK_HEADERS([lua.hpp], , [AC_MSG_ERROR("lua header not found.")])
-	AC_CHECK_LIB(lua, main, , [AC_MSG_ERROR("Linking against lua failed.")])
+PKG_CHECK_MODULES(LUA, lua5.1 >= 5.1, , [
+	AC_CHECK_HEADERS([lua.hpp], , [AC_MSG_ERROR("Lua header not found.")])
+	AC_CHECK_LIB(lua, main, , [AC_MSG_ERROR("Linking against Lua library failed.")])
 ])
 AC_SUBST(LUA_CFLAGS)
 AC_SUBST(LUA_LIBS)
